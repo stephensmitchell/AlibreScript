@@ -1,296 +1,121 @@
 # Alibre Script examples, demos and experiments.
-## Introduction
-This repository contains a collection of examples, demos, and experimental projects for Alibre Script, a scripting environment for Alibre Design. Here you'll find everything from basic script examples to advanced usage scenarios, aiding both learning and development.
-## Overview
-- Alibre-Script.Reflected
-  - Python stub files generated using .NET reflection
-- Alibre-Script-Code-Assistant
-  - Alibre Script custom GPT
-- Alibre-Script-VSCode
-  - VS Code workspace for Alibre Script development and learning
-- alibre-script.api.text
-  - Alibre Script API in txt and CSV formats
-- Alibre-Script-Stub-Files
-  - Python stub files for use outside of Alibre Design
-- alibre-script-library-examples
-  - Library examples
-- alibre-script-examples
-  - Documentation examples
-## Prerequisites
-- Python 3.8 or later
-- .NET Runtime
-- Visual Studio Code
-- Alibre Design Software
-## Contents
+
+Examples, demos, experiments, API references, and stub files for working with Alibre Script outside and inside Alibre Design.
+
+This project is focused on Alibre Script and IronPython 2.7.10 compatibility.
+
+## Table Of Contents
+
+- [What Is Here](#what-is-here)
+- [Quick Start](#quick-start)
+- [Key Files](#key-files)
+- [Key Folders](#key-folders)
+- [VS Code Type Checking](#vs-code-type-checking)
+- [Alibre Script API Verification](#alibre-script-api-verification)
+- [Notes](#notes)
+- [License](#license)
+
+## What Is Here
+
+This repository collects:
+
+- Alibre Script examples and showcases.
+- Generated Python stubs for editor autocomplete and Pylance/Pyright checking.
+- API text and CSV exports.
+- A self-contained runtime verifier for the real Alibre Script environment.
+- VS Code settings for local script development.
+
+## Quick Start
+
+Open this folder in VS Code:
+
+```text
+\AlibreScript
 ```
-C:.
-│   .gitignore
-│   Alibre-Script.code-workspace
-│   LICENSE
-│   README.md
-│
-├───AI-Generated-Content
-│       ChatGPT-README0.md
-│       ChatGPT-README1.md
-│       ChatGPT-README2.md
-│
-├───Alibre-Script-Code-Assistant
-│       001.py
-│       002.py
-│       003.py
-│       004.py
-│       005.py
-│       006.py
-│       007.py
-│       008.py
-│       009.py
-│       010.py
-│       011.py
-│       012.py
-│       013.py
-│       README.md
-│
-├───alibre-script-examples
-│       Alibre-Script-Examples.code-workspace
-│       Assembly-Constraints.py
-│       Bolt-Creator.py
-│       Calculating-Length-of-Curves.py
-│       Cap-Screw-ISO-4762-Bolts.py
-│       Copy-sketch.py
-│       Create-and-Modify-Global-Parameters.py
-│       Create-Reference-Planes-Axes-and-Points.py
-│       Creating-a-3D-Sketch-with-a-Spline-and-an-Arc.py
-│       Creating-a-Cylinder-Between-Two-Points.py
-│       Creating-and-Manipulating-Assemblies.py
-│       Custom-Values-and-Settings-Window.py
-│       Default-Reference-Geometry.py
-│       Drop-Down-Lists.py
-│       Everyone-Loves-a-Slinky.py
-│       Gear-Example.py
-│       Geodesic-Dome-Reference-Geometry.py
-│       Getting-User-Input.py
-│       Helical-spring.py
-│       Import-points-from-a-CSV-file-rotate-them-and-connect-into-a-polyline.py
-│       Importing-Files.py
-│       Joint-Creator.py
-│       List-All-Parts-in-an-Assembly-and-Sub-Assemblies.py
-│       Lofting-with-a-Guide-Curve.py
-│       Midplane-Extrusion.py
-│       Mobius-Strip.py
-│       Modify-an-Existing-Part.py
-│       Parameters-with-Units.py
-│       Pocket-Hole-Creator.py
-│       Polygon-Incircle.py
-│       Profile-and-Sweep-Path.py
-│       Reading-from-a-Spreadsheet.py
-│       README.md
-│       Rectangular-hollow-formed-profiles.py
-│       Reference-Geometry.py
-│       Scaling-a-Sketch.py
-│       Servo-Cam.py
-│       Slice-a-Part.py
-│       Square-hollow-formed-profiles.py
-│       Supressing-Unsupressing-and-Removing-Features.py
-│       Tool-Cutting.py
-│       Triangle.py
-│       Type-11-flanges-according-to-BS-EN-1092-PN16.py
-│       Units.py
-│       Useful-Dialogs.py
-│       Wave-washer.py
-│       Working-with-Configurations.py
-│
-├───alibre-script-library-examples
-│   │   README.md
-│   │
-│   ├───Import and Export
-│   │       MaxCellSize.jpg
-│   │       NormalDeviation.jpg
-│   │       Part Exporter.py
-│   │       STL Exporter.py
-│   │       SurfaceDeviation.jpg
-│   │
-│   ├───Mathematical
-│   │       Equation Sketcher.py
-│   │       EquationSketcher.png
-│   │
-│   ├───Mechanical
-│   │       Gear Generator.py
-│   │       GearGenerator.png
-│   │
-│   ├───Utilities
-│   │       File Copier.py
-│   │       Image to Python.py
-│   │       Pattern Along.py
-│   │       PatternAlong.png
-│   │       Sketch Copier.py
-│   │       SketchCopier.png
-│   │
-│   └───Woodworking
-│           Joint Creator.py
-│           JointCreatorIcon.png
-│           Pocket Hole Creator.py
-│           PocketHoleCreatorIcon.png
-│
-├───Alibre-Script-Stub-Files
-│       AlibreScriptAPI_Mock.py
-│       alibre_script_api.py
-│       alibre_script_api_advanced_docs.pyi
-│       alibre_script_api_docs.pyi
-│       alibre_script_api_python27_docs.py
-│       main.py
-│       mock_api (Original).py
-│       mock_api.py
-│       README.md
-│
-├───Alibre-Script-VSCode
-│       AlibreScript.py
-│       AlibreScriptAPIVSCodeDemo.code-workspace
-│       main.py
-│       main3.py
-│       NOTEBOOK.ipynb
-│       README.md
-│
-├───alibre-script.api.text
-│       alibre.script.api.txt
-│       alibre.script.api2.csv
-│       alibre.script.api2.txt
-│       alibre.script.api3.csv
-│       README.md
-│
-└───Alibre-Script.Reflected
-    │   AlibreScript.Reflected.code-workspace
-    │   generate.py
-    │   image.png
-    │   README.md
-    │
-    ├───bin
-    │       AlibreScript.py
-    │       AlibreScript2.py
-    │       ex_0 copy.py
-    │       ex_0.py
-    │       ex_1.py
-    │       main.py
-    │       Notebook.ipynb
-    │
-    ├───output
-    │       AssembledSubAssembly.py
-    │       Assembly.py
-    │       Axis.py
-    │       Bspline.py
-    │       Bspline3D.py
-    │       Circle.py
-    │       CircularArc.py
-    │       CircularArc3D.py
-    │       Configuration.py
-    │       CSharp.py
-    │       Edge.py
-    │       Ellipse.py
-    │       EllipticalArc.py
-    │       Face.py
-    │       Feature.py
-    │       GearSketch.py
-    │       GlobalParameters.py
-    │       IAssembled.py
-    │       IAxis.py
-    │       IChamferable.py
-    │       IConstrainable.py
-    │       ICrossSection.py
-    │       IFilletable.py
-    │       IInstance.py
-    │       IPlane.py
-    │       IPoint.py
-    │       ISelectableGeometry.py
-    │       ISketchFigure.py
-    │       ISketchFigure3D.py
-    │       ISketchSurface.py
-    │       ISweepPath.py
-    │       Line.py
-    │       Line3D.py
-    │       Material.py
-    │       Parameter.py
-    │       Part.py
-    │       Plane.py
-    │       Point.py
-    │       Polyline.py
-    │       Polyline3D.py
-    │       PolylinePoint.py
-    │       PolylinePoint3D.py
-    │       Sketch.py
-    │       Sketch3D.py
-    │       SketchPoint.py
-    │       SketchPoint3D.py
-    │       ThreeD.py
-    │       TwoD.py
-    │       Units.py
-    │       Vertex.py
-    │       Windows.py
-    │
-    ├───sources
-    │       AlibreScript.API.AssembledSubAssembly.txt
-    │       AlibreScript.API.Assembly.txt
-    │       AlibreScript.API.Axis.txt
-    │       AlibreScript.API.Bspline.txt
-    │       AlibreScript.API.Bspline3D.txt
-    │       AlibreScript.API.Circle.txt
-    │       AlibreScript.API.CircularArc.txt
-    │       AlibreScript.API.CircularArc3D.txt
-    │       AlibreScript.API.Configuration.txt
-    │       AlibreScript.API.CSharp.txt
-    │       AlibreScript.API.Edge.txt
-    │       AlibreScript.API.Ellipse.txt
-    │       AlibreScript.API.EllipticalArc.txt
-    │       AlibreScript.API.Face.txt
-    │       AlibreScript.API.Feature.txt
-    │       AlibreScript.API.GearSketch.txt
-    │       AlibreScript.API.GlobalParameters.txt
-    │       AlibreScript.API.IAssembled.txt
-    │       AlibreScript.API.IAxis.txt
-    │       AlibreScript.API.IChamferable.txt
-    │       AlibreScript.API.IConstrainable.txt
-    │       AlibreScript.API.ICrossSection.txt
-    │       AlibreScript.API.IFilletable.txt
-    │       AlibreScript.API.IInstance.txt
-    │       AlibreScript.API.IPlane.txt
-    │       AlibreScript.API.IPoint.txt
-    │       AlibreScript.API.ISelectableGeometry.txt
-    │       AlibreScript.API.ISketchFigure.txt
-    │       AlibreScript.API.ISketchFigure3D.txt
-    │       AlibreScript.API.ISketchSurface.txt
-    │       AlibreScript.API.ISweepPath.txt
-    │       AlibreScript.API.Line.txt
-    │       AlibreScript.API.Line3D.txt
-    │       AlibreScript.API.Material.txt
-    │       AlibreScript.API.Parameter.txt
-    │       AlibreScript.API.Part.txt
-    │       AlibreScript.API.Plane.txt
-    │       AlibreScript.API.Point.txt
-    │       AlibreScript.API.Polyline.txt
-    │       AlibreScript.API.Polyline3D.txt
-    │       AlibreScript.API.PolylinePoint.txt
-    │       AlibreScript.API.PolylinePoint3D.txt
-    │       AlibreScript.API.Sketch.txt
-    │       AlibreScript.API.Sketch3D.txt
-    │       AlibreScript.API.SketchPoint.txt
-    │       AlibreScript.API.SketchPoint3D.txt
-    │       AlibreScript.API.ThreeD.txt
-    │       AlibreScript.API.TwoD.txt
-    │       AlibreScript.API.Units.txt
-    │       AlibreScript.API.Vertex.txt
-    │       AlibreScript.API.Windows.txt
-    │
-    └───test.packages
-        ├───alibrescript_package
-        │   │   setup.py
-        │   │
-        │   └───alibrescript_package
-        │           AlibreScript.py
-        │           __init__.py
-        │
-        └───alibrescript_windows_package
-            │   setup.py
-            │
-            └───alibrescript_windows_package
-                    Windows.py
-                    __init__.py
+
+Use `main.py` for local script experiments.
+
+Use `alibre_script_all_types_main.py` inside Alibre Script to verify the real API environment.
+
+## Key Files
+
+| File | Purpose |
+| --- | --- |
+| `alibre_script_all_types_main.py` | Self-contained verifier for Alibre Script types, globals, parameters, sketches, and 3D sketches. |
+| `main.py` | Local test script for VS Code and Pylance/Pyright. |
+| `pyrightconfig.json` | Points Pyright at the generated Alibre Script stubs. |
+| `Alibre-Script.code-workspace` | VS Code workspace file. |
+| `.gitignore` | Ignores caches, local output, logs, and editor noise. |
+
+## Key Folders
+
+| Folder | Purpose |
+| --- | --- |
+| `Alibre-Script-Stub-Files/` | Generated and source stub files for editor support. |
+| `Alibre-Script-Stub-Files/generated/package/AlibreScript/` | Main importable stub package used by VS Code. |
+| `alibre-script.api.text/` | API text, CSV exports, examples, and stub generator tools. |
+| `alibre-script-examples/` | Example scripts from Alibre Script documentation. |
+| `alibre-script-library-examples/` | Larger library-style examples. |
+| `showcases/` | Markdown demos and testbed notes. |
+| `Alibre-Script-Code-Assistant/` | Assistant-oriented examples and support content. |
+| `Alibre-Script.Reflected/` | Reflected API source material. |
+
+## VS Code Type Checking
+
+The generated stub package is used for local editor support:
+
+```text
+Alibre-Script-Stub-Files/generated/package
 ```
-All content and branding related to Alibre, Alibre Design, and Alibre Script, including any third-party contributions, are governed by their respective licensing agreements and are the intellectual property of Alibre, LLC.
+
+Important Alibre Script globals are supported by the stubs and verifier, including:
+
+```python
+CurrentPart()
+CurrentAssembly()
+CurrentParts()
+CurrentAssemblies()
+ScriptFileName
+ScriptFolder
+```
+
+VS Code should use `pyrightconfig.json` and `.vscode/settings.json` to find the stubs.
+
+## Alibre Script API Verification
+
+Run this file from the Alibre Script add-on or console:
+
+```text
+alibre_script_all_types_main.py
+```
+
+The verifier checks:
+
+- Built-in Alibre Script globals.
+- Top-level API types.
+- Nested types and constants.
+- Current part read/create APIs.
+- 2D sketch creation.
+- 3D sketch creation through a new `Part(...)`.
+- Parameter creation and updates.
+
+A clean run ends with:
+
+```text
+== Verification Summary ==
+Errors: 0
+Missing: 0
+RESULT PASS
+```
+
+## Notes
+
+- Alibre Script uses IronPython 2.7.10, so scripts should stay Python 2.7 compatible.
+- The local CPython fallback behavior in `alibre_script_all_types_main.py` is for syntax and editor checks only.
+- Real API behavior must be verified inside Alibre Script.
+
+## License
+
+See [LICENSE](LICENSE).
+
+Alibre, Alibre Design, and Alibre Script names and related materials belong to their respective owners.

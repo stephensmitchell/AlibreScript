@@ -8,6 +8,7 @@ This project is focused on Alibre Script and IronPython 2.7.10 compatibility.
 
 - [What Is Here](#what-is-here)
 - [Quick Start](#quick-start)
+- [LLM And Agent Resources](#llm-and-agent-resources)
 - [Key Files](#key-files)
 - [Key Folders](#key-folders)
 - [VS Code Type Checking](#vs-code-type-checking)
@@ -37,6 +38,21 @@ Use `main.py` for local script experiments.
 
 Use `alibre_script_all_types_main.py` inside Alibre Script to verify the real API environment.
 
+## LLM And Agent Resources
+
+Use these files when working with LLMs, coding agents, or prompt-driven Alibre Script generation:
+
+| Resource | Purpose |
+| --- | --- |
+| `alibre-script.api.text/llms.txt` | Short LLM entry point with primary resources, runtime assumptions, retrieval queries, and common examples. |
+| `alibre-script.api.text/AGENTS.md` | Agent guide with coding rules, search strategy, and validation workflow. |
+| `alibre-script.api.text/docs/API-QUICK-REFERENCE.md` | Curated API signatures and common usage patterns. |
+| `alibre-script.api.text/docs/AGENT-WORKFLOWS.md` | Repeatable workflows for agent-assisted script generation. |
+| `alibre-script.api.text/docs/PROMPT-TEMPLATES.md` | Copy-ready prompts for Alibre Script tasks. |
+| `alibre-script.api.text/docs/ECOSYSTEM-RESOURCE-MAP.md` | Map of how the examples, reflected output, stubs, and assistant content fit together. |
+| `alibre-script.api.text/docs/STUB-REVIEW.md` | Stub correctness notes and regeneration strategy. |
+| `alibre-script.api.text/docs/PACKAGE-USAGE.md` | How to use the generated stubs in IDEs or package workflows. |
+
 ## Key Files
 
 | File | Purpose |
@@ -45,6 +61,8 @@ Use `alibre_script_all_types_main.py` inside Alibre Script to verify the real AP
 | `main.py` | Local test script for VS Code and Pylance/Pyright. |
 | `pyrightconfig.json` | Points Pyright at the generated Alibre Script stubs. |
 | `Alibre-Script.code-workspace` | VS Code workspace file. |
+| `alibre-script.api.text/llms.txt` | LLM-friendly entry point for this API reference. |
+| `alibre-script.api.text/AGENTS.md` | Coding-agent instructions for this repo. |
 | `.gitignore` | Ignores caches, local output, logs, and editor noise. |
 
 ## Key Folders
@@ -53,7 +71,8 @@ Use `alibre_script_all_types_main.py` inside Alibre Script to verify the real AP
 | --- | --- |
 | `Alibre-Script-Stub-Files/` | Generated and source stub files for editor support. |
 | `Alibre-Script-Stub-Files/generated/package/AlibreScript/` | Main importable stub package used by VS Code. |
-| `alibre-script.api.text/` | API text, CSV exports, examples, and stub generator tools. |
+| `alibre-script.api.text/` | API text, CSV exports, LLM/agent docs, examples, and stub generator tools. |
+| `alibre-script.api.text/docs/` | LLM and agent workflow docs. |
 | `alibre-script-examples/` | Example scripts from Alibre Script documentation. |
 | `alibre-script-library-examples/` | Larger library-style examples. |
 | `showcases/` | Markdown demos and testbed notes. |

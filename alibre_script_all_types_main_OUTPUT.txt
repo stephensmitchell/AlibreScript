@@ -1,0 +1,408 @@
+Alibre Script build 347013
+IronPython 2.7.10.0 Interactive Console
+For documentation visit http://docs.python.org/2.7
+The complete standard library is available
+
+Console commands available:
+  history                    : Prints history of entered commands
+  cls                        : Clears the screen
+  help                       : Shows the list of console commands
+  run                        : Executes the current script
+  run arg1 arg2              : Executes the current script, pass arguments
+  run "scriptname"           : Executes a specific script
+  run "scriptname" arg1 arg2 : Executes a specific script, pass arguments
+
+>>>
+Alibre Script all-types main() test
+Self-contained fallback mocks: False
+Create test geometry: True
+Parameter showcase test: True
+3D sketch test: True
+3D sketch six-scalar line test: True
+
+== Built-In Globals ==
+OK     ScriptFileName = ''
+OK     ScriptFolder = ''
+
+== Current Document Functions ==
+OK     CurrentPart() -> Part
+N/A    CurrentAssembly(): Exception: Current session is not an assembly
+OK     CurrentParts() -> list
+OK     CurrentAssemblies() -> list
+
+== Top-Level Types From __init__.pyi ==
+OK     Part -> type
+OK     Assembly -> type
+OK     AssembledPart -> type
+OK     AssembledSubAssembly -> type
+OK     Sketch -> type
+OK     Sketch3D -> type
+OK     Plane -> type
+OK     Axis -> type
+OK     Point -> type
+OK     Face -> type
+OK     Edge -> type
+OK     Vertex -> type
+OK     Feature -> type
+OK     Windows -> Func[Windows]
+OK     Bspline -> type
+OK     Bspline3D -> type
+OK     CSharp -> Func[CSharp]
+OK     Circle -> type
+OK     CircularArc -> type
+OK     CircularArc3D -> type
+OK     Configuration -> type
+OK     Ellipse -> type
+OK     EllipticalArc -> type
+OK     GearSketch -> type
+OK     GlobalParameters -> type
+OK     GuideCurveTypes -> type
+OK     IAxis -> type
+OK     IPlane -> type
+OK     IPoint -> type
+OK     Line -> type
+OK     Line3D -> type
+OK     LockTypes -> type
+OK     Material -> type
+OK     Parameter -> type
+OK     ParameterTypes -> type
+OK     ParameterUnits -> type
+OK     Polyline -> type
+OK     Polyline3D -> type
+OK     PolylinePoint -> type
+OK     PolylinePoint3D -> type
+OK     SketchPoint -> type
+OK     SketchPoint3D -> type
+OK     ThreeD -> type
+OK     TwoD -> type
+OK     UnitTypes -> type
+OK     Units -> type
+OK     WindowsInputTypes -> type
+Summary: 47 found, 0 missing
+
+== Nested Types From __init__.pyi ==
+OK     Part.DirectionType -> type
+OK     Part.EndCondition -> type
+OK     Part.FileTypes -> type
+OK     Assembly.ConstraintBoundsType -> type
+OK     Sketch.Constraints -> type
+OK     CircularArc.ArcType -> type
+OK     CircularArc3D.ArcType -> type
+Summary: 7 found, 0 missing
+
+== Constants And Fields From __init__.pyi ==
+OK     Part.DirectionType.Normal -> DirectionType
+OK     Part.EndCondition.ToDepth -> EndCondition
+OK     Part.EndCondition.ThroughAll -> EndCondition
+OK     Part.EndCondition.MidPlane -> EndCondition
+OK     Part.EndCondition.EntirePath -> EndCondition
+OK     Part.FileTypes.GeomagicDesignPart -> FileTypes
+OK     Part.FileTypes.AlibreDesignPart -> FileTypes
+OK     Part.FileTypes.STEP -> FileTypes
+OK     Part.FileTypes.IGES -> FileTypes
+OK     Part.FileTypes.ThreeDM -> FileTypes
+OK     Part.FileTypes.SAT -> FileTypes
+OK     Part.FileTypes.STL_in -> FileTypes
+OK     Part.FileTypes.STL_cm -> FileTypes
+OK     Part.FileTypes.STL_mm -> FileTypes
+OK     Part.Comment -> getset_descriptor
+OK     Part.Configurations -> getset_descriptor
+OK     Part.CostCenter -> getset_descriptor
+OK     Part.CreatedBy -> getset_descriptor
+OK     Part.CreatedDate -> getset_descriptor
+OK     Part.CreatingApplication -> getset_descriptor
+OK     Part.Density -> getset_descriptor
+OK     Part.Description -> getset_descriptor
+OK     Part.DocumentNumber -> getset_descriptor
+OK     Part.EngineeringApprovalDate -> getset_descriptor
+OK     Part.EngineeringApprovedBy -> getset_descriptor
+OK     Part.EstimatedCost -> getset_descriptor
+OK     Part.ExtendedMaterialInformation -> getset_descriptor
+OK     Part.FileName -> getset_descriptor
+OK     Part.Keywords -> getset_descriptor
+OK     Part.LastAuthor -> getset_descriptor
+OK     Part.LastUpdateDate -> getset_descriptor
+OK     Part.ManufacturingApprovedBy -> getset_descriptor
+OK     Part.ManufacturingApprovedDate -> getset_descriptor
+OK     Part.Mass -> getset_descriptor
+OK     Part.Material -> getset_descriptor
+OK     Part.ModifiedInformation -> getset_descriptor
+OK     Part.Name -> getset_descriptor
+OK     Part.Number -> getset_descriptor
+OK     Part.Origin -> getset_descriptor
+OK     Part.Parameters -> getset_descriptor
+OK     Part.Product -> getset_descriptor
+OK     Part.ReceivedFrom -> getset_descriptor
+OK     Part.Revision -> getset_descriptor
+OK     Part.Selections -> getset_descriptor
+OK     Part.StockSize -> getset_descriptor
+OK     Part.Supplier -> getset_descriptor
+OK     Part.Title -> getset_descriptor
+OK     Part.Vendor -> getset_descriptor
+OK     Part.WebLink -> getset_descriptor
+OK     Part.XAxis -> getset_descriptor
+OK     Part.XYPlane -> getset_descriptor
+OK     Part.YAxis -> getset_descriptor
+OK     Part.YZPlane -> getset_descriptor
+OK     Part.ZAxis -> getset_descriptor
+OK     Part.ZXPlane -> getset_descriptor
+OK     Assembly.Comment -> getset_descriptor
+OK     Assembly.Configurations -> getset_descriptor
+OK     Assembly.CostCenter -> getset_descriptor
+OK     Assembly.CreatedBy -> getset_descriptor
+OK     Assembly.CreatedDate -> getset_descriptor
+OK     Assembly.CreatingApplication -> getset_descriptor
+OK     Assembly.Density -> getset_descriptor
+OK     Assembly.Description -> getset_descriptor
+OK     Assembly.DocumentNumber -> getset_descriptor
+OK     Assembly.EngineeringApprovalDate -> getset_descriptor
+OK     Assembly.EngineeringApprovedBy -> getset_descriptor
+OK     Assembly.EstimatedCost -> getset_descriptor
+OK     Assembly.ExtendedMaterialInformation -> getset_descriptor
+OK     Assembly.FileName -> getset_descriptor
+OK     Assembly.Keywords -> getset_descriptor
+OK     Assembly.LastAuthor -> getset_descriptor
+OK     Assembly.LastUpdateDate -> getset_descriptor
+OK     Assembly.ManufacturingApprovedBy -> getset_descriptor
+OK     Assembly.ManufacturingApprovedDate -> getset_descriptor
+OK     Assembly.Material -> getset_descriptor
+OK     Assembly.ModifiedInformation -> getset_descriptor
+OK     Assembly.Name -> getset_descriptor
+OK     Assembly.Number -> getset_descriptor
+OK     Assembly.Origin -> getset_descriptor
+OK     Assembly.Parameters -> getset_descriptor
+OK     Assembly.Parts -> getset_descriptor
+OK     Assembly.Product -> getset_descriptor
+OK     Assembly.ReceivedFrom -> getset_descriptor
+OK     Assembly.Revision -> getset_descriptor
+OK     Assembly.Selections -> getset_descriptor
+OK     Assembly.StockSize -> getset_descriptor
+OK     Assembly.SubAssemblies -> getset_descriptor
+OK     Assembly.Supplier -> getset_descriptor
+OK     Assembly.Title -> getset_descriptor
+OK     Assembly.Vendor -> getset_descriptor
+OK     Assembly.WebLink -> getset_descriptor
+OK     Assembly.XAxis -> getset_descriptor
+OK     Assembly.XYPlane -> getset_descriptor
+OK     Assembly.YAxis -> getset_descriptor
+OK     Assembly.YZPlane -> getset_descriptor
+OK     Assembly.ZAxis -> getset_descriptor
+OK     Assembly.ZXPlane -> getset_descriptor
+OK     AssembledPart.Configurations -> getset_descriptor
+OK     AssembledPart.Name -> getset_descriptor
+OK     AssembledSubAssembly.Configurations -> getset_descriptor
+OK     AssembledSubAssembly.Name -> getset_descriptor
+OK     Sketch.Constraints.Coincident -> Constraints
+OK     Sketch.Constraints.Collinear -> Constraints
+OK     Sketch.Constraints.Equal -> Constraints
+OK     Sketch.Constraints.Horizontal -> Constraints
+OK     Sketch.Constraints.Parallel -> Constraints
+OK     Sketch.Constraints.Perpendicular -> Constraints
+OK     Sketch.Constraints.Tangent -> Constraints
+OK     Sketch.Constraints.Vertical -> Constraints
+OK     Sketch.Figures -> getset_descriptor
+OK     Sketch.Name -> getset_descriptor
+OK     Sketch.Origin -> getset_descriptor
+OK     Sketch3D.Figures -> getset_descriptor
+OK     Sketch3D.Name -> getset_descriptor
+OK     Plane.Name -> getset_descriptor
+OK     Axis.Name -> getset_descriptor
+OK     Point.Name -> getset_descriptor
+OK     Point.X -> getset_descriptor
+OK     Point.Y -> getset_descriptor
+OK     Point.Z -> getset_descriptor
+OK     Face.Name -> getset_descriptor
+OK     Edge.Diameter -> getset_descriptor
+OK     Edge.Length -> getset_descriptor
+OK     Edge.Name -> getset_descriptor
+OK     Vertex.Name -> getset_descriptor
+OK     Vertex.X -> getset_descriptor
+OK     Vertex.Y -> getset_descriptor
+OK     Vertex.Z -> getset_descriptor
+OK     Feature.Name -> getset_descriptor
+OK     Bspline.ControlPoints -> getset_descriptor
+OK     Bspline.IsReference -> getset_descriptor
+OK     Bspline.KnotVectors -> getset_descriptor
+OK     Bspline.Length -> getset_descriptor
+OK     Bspline.Order -> getset_descriptor
+OK     Bspline.Weights -> getset_descriptor
+OK     Bspline3D.ControlPoints -> getset_descriptor
+OK     Bspline3D.IsReference -> getset_descriptor
+OK     Bspline3D.KnotVectors -> getset_descriptor
+OK     Bspline3D.Length -> getset_descriptor
+OK     Bspline3D.Order -> getset_descriptor
+OK     Bspline3D.Weights -> getset_descriptor
+OK     Circle.Center -> getset_descriptor
+OK     Circle.CenterPoint -> getset_descriptor
+OK     Circle.IsReference -> getset_descriptor
+OK     Circle.Length -> getset_descriptor
+OK     Circle.Radius -> getset_descriptor
+OK     CircularArc.Angle -> getset_descriptor
+OK     CircularArc.Center -> getset_descriptor
+OK     CircularArc.CenterPoint -> getset_descriptor
+OK     CircularArc.End -> getset_descriptor
+OK     CircularArc.EndPoint -> getset_descriptor
+OK     CircularArc.IsReference -> getset_descriptor
+OK     CircularArc.Radius -> getset_descriptor
+OK     CircularArc.Start -> getset_descriptor
+OK     CircularArc.StartPoint -> getset_descriptor
+OK     CircularArc.Type -> getset_descriptor
+OK     CircularArc3D.Angle -> getset_descriptor
+OK     CircularArc3D.Center -> getset_descriptor
+OK     CircularArc3D.EndPoint -> getset_descriptor
+OK     CircularArc3D.IsReference -> getset_descriptor
+OK     CircularArc3D.Radius -> getset_descriptor
+OK     CircularArc3D.StartPoint -> getset_descriptor
+OK     CircularArc3D.Type -> getset_descriptor
+OK     Configuration.IsActive -> getset_descriptor
+OK     Configuration.Name -> getset_descriptor
+OK     Ellipse.Center -> getset_descriptor
+OK     Ellipse.CenterPoint -> getset_descriptor
+OK     Ellipse.IsReference -> getset_descriptor
+OK     Ellipse.MajorAxisAngle -> getset_descriptor
+OK     Ellipse.MinorMajorRatio -> getset_descriptor
+OK     Ellipse.Radius -> getset_descriptor
+OK     EllipticalArc.Center -> getset_descriptor
+OK     EllipticalArc.CenterPoint -> getset_descriptor
+OK     EllipticalArc.End -> getset_descriptor
+OK     EllipticalArc.EndPoint -> getset_descriptor
+OK     EllipticalArc.IsReference -> getset_descriptor
+OK     EllipticalArc.MajorAxisAngle -> getset_descriptor
+OK     EllipticalArc.MinorMajorRatio -> getset_descriptor
+OK     EllipticalArc.Radius -> getset_descriptor
+OK     EllipticalArc.Start -> getset_descriptor
+OK     EllipticalArc.StartPoint -> getset_descriptor
+OK     GearSketch.CenterX -> field#
+OK     GearSketch.CenterY -> field#
+OK     GearSketch.DiametralPitch -> field#
+OK     GearSketch.NumberofTeeth -> field#
+OK     GearSketch.PitchDiameter -> field#
+OK     GearSketch.PressureAngle -> field#
+OK     GlobalParameters.Configurations -> getset_descriptor
+OK     GlobalParameters.Name -> getset_descriptor
+OK     GlobalParameters.Parameters -> getset_descriptor
+OK     GuideCurveTypes.Global -> GuideCurveTypes
+OK     GuideCurveTypes.Local -> GuideCurveTypes
+OK     Line.End -> getset_descriptor
+OK     Line.EndPoint -> getset_descriptor
+OK     Line.IsReference -> getset_descriptor
+OK     Line.Length -> getset_descriptor
+OK     Line.Start -> getset_descriptor
+OK     Line.StartPoint -> getset_descriptor
+OK     Line3D.End -> getset_descriptor
+OK     Line3D.EndPoint -> getset_descriptor
+OK     Line3D.IsReference -> getset_descriptor
+OK     Line3D.Length -> getset_descriptor
+OK     Line3D.Start -> getset_descriptor
+OK     Line3D.StartPoint -> getset_descriptor
+OK     LockTypes.SuppressNewFeatures -> LockTypes
+OK     LockTypes.LockColorProperties -> LockTypes
+OK     Material.ABS -> float
+OK     Material.PLA -> float
+OK     Parameter.Comment -> getset_descriptor
+OK     Parameter.Equation -> getset_descriptor
+OK     Parameter.ExcelCell -> getset_descriptor
+OK     Parameter.ExcelSheet -> getset_descriptor
+OK     Parameter.ExcelWorkbook -> getset_descriptor
+OK     Parameter.Name -> getset_descriptor
+OK     Parameter.RawValue -> getset_descriptor
+OK     Parameter.Type -> getset_descriptor
+OK     Parameter.Units -> getset_descriptor
+OK     Parameter.Value -> getset_descriptor
+OK     ParameterTypes.Distance -> ParameterTypes
+OK     ParameterTypes.Angle -> ParameterTypes
+OK     ParameterTypes.Count -> ParameterTypes
+OK     ParameterUnits.Unitless -> ParameterUnits
+OK     ParameterUnits.Millimeters -> ParameterUnits
+OK     ParameterUnits.Centimeters -> ParameterUnits
+OK     ParameterUnits.Inches -> ParameterUnits
+OK     ParameterUnits.Degrees -> ParameterUnits
+OK     PolylinePoint.X -> field#
+OK     PolylinePoint.Y -> field#
+OK     PolylinePoint3D.X -> field#
+OK     PolylinePoint3D.Y -> field#
+OK     PolylinePoint3D.Z -> field#
+OK     SketchPoint.IsReference -> getset_descriptor
+OK     SketchPoint.X -> getset_descriptor
+OK     SketchPoint.Y -> getset_descriptor
+OK     SketchPoint3D.IsReference -> getset_descriptor
+OK     SketchPoint3D.X -> getset_descriptor
+OK     SketchPoint3D.Y -> getset_descriptor
+OK     SketchPoint3D.Z -> getset_descriptor
+OK     UnitTypes.Millimeters -> UnitTypes
+OK     UnitTypes.Inches -> UnitTypes
+OK     UnitTypes.Centimeters -> UnitTypes
+OK     Units.Current -> UnitTypes
+OK     WindowsInputTypes.Boolean -> WindowsInputTypes
+OK     WindowsInputTypes.Edge -> WindowsInputTypes
+OK     WindowsInputTypes.Face -> WindowsInputTypes
+OK     WindowsInputTypes.File -> WindowsInputTypes
+OK     WindowsInputTypes.Folder -> WindowsInputTypes
+OK     WindowsInputTypes.Image -> WindowsInputTypes
+OK     WindowsInputTypes.Integer -> WindowsInputTypes
+OK     WindowsInputTypes.Part -> WindowsInputTypes
+OK     WindowsInputTypes.Plane -> WindowsInputTypes
+OK     WindowsInputTypes.Real -> WindowsInputTypes
+OK     WindowsInputTypes.SaveFile -> WindowsInputTypes
+OK     WindowsInputTypes.Sketch -> WindowsInputTypes
+OK     WindowsInputTypes.Sketch3D -> WindowsInputTypes
+OK     WindowsInputTypes.String -> WindowsInputTypes
+OK     WindowsInputTypes.StringList -> WindowsInputTypes
+Summary: 257 found, 0 missing
+
+== CurrentPart Read API ==
+OK     GetPlane('XY-Plane') -> Plane
+OK     GetPlane('YZ-Plane') -> Plane
+OK     GetPlane('ZX-Plane') -> Plane
+OK     GetAxis('X-Axis') -> Axis
+OK     GetAxis('Y-Axis') -> Axis
+OK     GetAxis('Z-Axis') -> Axis
+OK     GetPoint('Origin') -> Point
+OK     GetActiveConfiguration() -> Configuration
+OK     GetEdges() -> list
+OK     GetFaces() -> list
+OK     GetVertices() -> list
+OK     GetBoundingBox() -> list
+
+== CurrentPart Create API ==
+OK     AddPoint -> Point
+OK     AddAxis -> Axis
+OK     AddPlane -> Plane
+OK     AddSketch -> Sketch
+OK     Sketch.AddPoint -> SketchPoint
+OK     Sketch.AddLine -> Line
+OK     Sketch.AddCircle -> Circle
+OK     Sketch.AddRectangle -> NoneType
+
+== New Part 3D Sketch API ==
+OK     my_part = Part('new3dSketch') -> Part
+OK     Part('new3dSketch').Regenerate() -> NoneType
+OK     Part('new3dSketch').Add3DSketch('My3DSketch') -> Sketch3D
+OK     Sketch3D.AddBspline -> Bspline3D
+OK     Sketch3D.AddLine.list_points -> NoneType
+OK     Sketch3D.AddArcCenterStartEnd -> NoneType
+OK     Sketch3D.AddLines -> NoneType
+OK     Sketch3D.AddPoint -> NoneType
+OK     Sketch3D.AddLine.six_scalars -> NoneType
+
+== Parameter Showcase Transaction API ==
+OK     AddParameter.Width -> Parameter
+OK     AddParameter.Height -> Parameter
+OK     AddParameter.Angle -> Parameter
+OK     AddParameter.EquationParam -> Parameter
+OK     GetParameter.Width -> Parameter
+OK     Width.Value = 75.0
+OK     GetParameter.EquationParam -> Parameter
+OK     EquationParam.Equation = 'Height * 2'
+OK     Parameters count -> 4
+
+== Verification Summary ==
+Errors: 0
+Missing: 0
+Warnings: 0
+Skipped: 0
+Not applicable: 1
+RESULT PASS
+
+main() complete
+>>>

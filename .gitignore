@@ -41,7 +41,6 @@ ENV/
 
 # Logs and generated local run output
 *.log
-*_OUTPUT.txt
 *.tmp
 *.bak
 

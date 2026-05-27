@@ -796,6 +796,10 @@ GitHub install after the repository is pushed:
 pip install "git+https://github.com/stephensmitchell/AlibreScript.git#egg=alibrescript-ide-stubs&subdirectory=Alibre-Script-Stub-Files/generated/package"
 ```
 
+This is a Git repository install, not a GitHub Packages registry publish.
+GitHub Packages does not currently provide a PyPI-compatible Python package
+registry. Use PyPI/TestPyPI for a real Python package registry.
+
 Full usage and publishing notes:
 
 ```text

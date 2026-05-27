@@ -86,6 +86,14 @@ pip install "git+https://github.com/stephensmitchell/AlibreScript.git#egg=alibre
 This installs the authoring-only `AlibreScript` module for external IDEs. Do not
 use this install inside the Alibre Script add-on.
 
+This is not a GitHub Packages registry publish. It is a normal Git repository
+install using `pip` and the package metadata under
+`Alibre-Script-Stub-Files/generated/package`.
+
+GitHub Packages does not currently provide a PyPI-compatible Python package
+registry. Use PyPI/TestPyPI for a real Python package registry, or keep using the
+GitHub repository URL above for private/local IDE installs.
+
 ## Local Wheel Or Source Distribution
 
 From the package folder:

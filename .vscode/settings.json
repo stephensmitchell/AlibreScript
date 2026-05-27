@@ -1,0 +1,5 @@
+{
+  "python.analysis.extraPaths": [
+    "./Alibre-Script-Stub-Files/generated/package"
+  ]
+}

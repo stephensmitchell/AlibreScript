@@ -164,7 +164,6 @@ STATIC_CONSTANTS = {
     "Sketch.Constraints": [
         "Coincident",
         "Collinear",
-        "Concentric",
         "Equal",
         "Horizontal",
         "Parallel",
@@ -172,9 +171,11 @@ STATIC_CONSTANTS = {
         "Tangent",
         "Vertical",
     ],
-    "Assembly.ConstraintBoundsType": ["None_", "Minimum", "Maximum"],
-    "CircularArc.ArcType": ["Normal", "Reference"],
-    "CircularArc3D.ArcType": ["Normal", "Reference"],
+    # These nested enum types exist in Alibre Script build 347013, but the
+    # member constants were not exposed as Python attributes in runtime testing.
+    "Assembly.ConstraintBoundsType": [],
+    "CircularArc.ArcType": [],
+    "CircularArc3D.ArcType": [],
 }
 
 

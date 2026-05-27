@@ -263,9 +263,7 @@ class Part:
 
 class Assembly:
     class ConstraintBoundsType:
-        None_: Any
-        Minimum: Any
-        Maximum: Any
+        pass
     Comment: Any
     Configurations: Any
     CostCenter: Any
@@ -572,7 +570,6 @@ class Sketch:
     class Constraints:
         Coincident: Any
         Collinear: Any
-        Concentric: Any
         Equal: Any
         Horizontal: Any
         Parallel: Any
@@ -835,8 +832,7 @@ class Circle:
 
 class CircularArc:
     class ArcType:
-        Normal: Any
-        Reference: Any
+        pass
     Angle: Any
     Center: Any
     CenterPoint: Any
@@ -854,8 +850,7 @@ class CircularArc:
 
 class CircularArc3D:
     class ArcType:
-        Normal: Any
-        Reference: Any
+        pass
     Angle: Any
     Center: Any
     EndPoint: Any

@@ -8,17 +8,24 @@ import sys
 from math import cos, radians, sin
 
 
-try:
-    from AlibreScript import *
-except ImportError:
-    StubPackage = os.path.join(
-        os.path.dirname(__file__),
-        'Alibre-Script-Stub-Files',
-        'generated',
-        'package'
-    )
+StubPackage = os.path.join(
+    os.path.dirname(__file__),
+    'Alibre-Script-Stub-Files',
+    'generated',
+    'package'
+)
+
+if os.path.isdir(StubPackage) and StubPackage not in sys.path:
     sys.path.insert(0, StubPackage)
-    from AlibreScript import *
+
+from AlibreScript import (
+    CurrentAssemblies,
+    CurrentAssembly,
+    CurrentPart,
+    CurrentParts,
+    ScriptFileName,
+    ScriptFolder,
+)
 
 
 def create_two_angle_fixture_references():

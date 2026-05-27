@@ -224,9 +224,7 @@ class Part(_StubBase):
 
 class Assembly(_StubBase):
     class ConstraintBoundsType(object):
-        None_ = 1
-        Minimum = 2
-        Maximum = 3
+        pass
     Comment = None
     Configurations = None
     CostCenter = None
@@ -472,13 +470,12 @@ class Sketch(_StubBase):
     class Constraints(object):
         Coincident = 1
         Collinear = 2
-        Concentric = 3
-        Equal = 4
-        Horizontal = 5
-        Parallel = 6
-        Perpendicular = 7
-        Tangent = 8
-        Vertical = 9
+        Equal = 3
+        Horizontal = 4
+        Parallel = 5
+        Perpendicular = 6
+        Tangent = 7
+        Vertical = 8
     Figures = None
     Name = None
     Origin = None
@@ -763,8 +760,7 @@ class Circle(_StubBase):
 
 class CircularArc(_StubBase):
     class ArcType(object):
-        Normal = 1
-        Reference = 2
+        pass
     Angle = None
     Center = None
     CenterPoint = None
@@ -780,8 +776,7 @@ class CircularArc(_StubBase):
 
 class CircularArc3D(_StubBase):
     class ArcType(object):
-        Normal = 1
-        Reference = 2
+        pass
     Angle = None
     Center = None
     EndPoint = None

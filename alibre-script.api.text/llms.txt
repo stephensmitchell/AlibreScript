@@ -1,0 +1,61 @@
+# Alibre Script API Text
+
+This project is an LLM-friendly local reference for creating Alibre Design
+scripts with IronPython 2.7.
+
+## Primary Resources
+
+- `alibre.script.api3.csv`: compact machine-readable API member list.
+- `alibre.script.api2.csv`: larger machine-readable API member list.
+- `alibre.script.api.txt`: full text API member list.
+- `../alibre-script-examples/`: simple scripts by capability.
+- `../alibre-script-library-examples/`: larger scripts with dialogs and utility workflows.
+- `AGENTS.md`: rules for coding agents working in this repo.
+- `docs/API-QUICK-REFERENCE.md`: curated signatures and examples.
+- `docs/AGENT-WORKFLOWS.md`: repeatable workflows for script generation.
+- `docs/PROMPT-TEMPLATES.md`: copy-ready prompts for LLM-assisted Alibre Script work.
+- `docs/ECOSYSTEM-RESOURCE-MAP.md`: how to use sibling folders such as reflected output, stubs, and Code Assistant scripts.
+- `docs/STUB-REVIEW.md`: correctness review and regeneration strategy for stubs.
+- `docs/PACKAGE-USAGE.md`: how to install the generated stubs manually or package them for PyPI.
+- `tools/audit_stubs.py`: read-only stub audit tool.
+- `tools/generate_stubs.py`: creates `../Alibre-Script-Stub-Files/generated/AlibreScript.py` and `.pyi`.
+
+## Sibling Workspace Resources
+
+- `../Alibre-Script.Reflected/`: reflected per-class API source and generated Python-like output.
+- `../Alibre-Script-Stub-Files/`: stubs and mocks for editor autocomplete/reference.
+- `../Alibre-Script-Code-Assistant/`: AI-generated script examples to use as unverified seeds.
+
+## Runtime Assumptions
+
+- Language: IronPython 2.7 inside Alibre Script.
+- Syntax: Python 2 compatible; avoid f-strings, annotations, and Python 3-only libraries.
+- Geometry units: use the part/script units used by Alibre; angle values are degrees in the documented examples.
+- Current script path globals: `ScriptFileName`, `ScriptFolder`.
+- Active part access: `P = CurrentPart()`.
+- Active assembly access: `A = CurrentAssembly()`.
+- Open documents: `Parts = CurrentParts()`, `Assys = CurrentAssemblies()`.
+- New part creation: `P = Part('Part Name')`.
+
+## Common Retrieval Queries
+
+```text
+AddPlane angled plane axis angle
+AddAxis two points planes faces
+AddSketch AddRectangle AddCircle AddLine
+AddExtrudeBoss AddExtrudeCut EndCondition DirectionType
+WindowsInputTypes OptionsDialog UtilityDialog
+ScriptFileName ScriptFolder CurrentPart CurrentAssembly CurrentParts CurrentAssemblies
+GetPlane GetAxis GetPoint GetFace
+Reflected sources output stubs mock_api Code Assistant
+```
+
+## Common Example Files
+
+- Reference geometry: `../alibre-script-examples/Create-Reference-Planes-Axes-and-Points.py`
+- Default datums: `../alibre-script-examples/Default-Reference-Geometry.py`
+- Angled planes: `../alibre-script-examples/Mobius-Strip.py`
+- Repeated angled planes: `../alibre-script-examples/Tool-Cutting.py`
+- User input dialogs: `../alibre-script-examples/Getting-User-Input.py`
+- Export workflows: `../alibre-script-library-examples/Import and Export/STL Exporter.py`
+- Active-part workflows: `../alibre-script-library-examples/Mechanical/Gear Generator.py`

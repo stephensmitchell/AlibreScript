@@ -9,7 +9,7 @@ Status: Done
 Category: Testbed
 Reviewed: No
 Created time: February 25, 2025 9:51 PM
-AI summary: Python function to find a shared edge between two faces in a 3D model using Alibre Script and IronPython, returning the edge if found or indicating none exists.
+AI summary: Python function that finds a shared edge between two faces in a 3D model, using Alibre Script and IronPython. Returns the edge if found, or indicates that none exists.
 
 ```python
 def GetSharedEdge(FaceA, FaceB):

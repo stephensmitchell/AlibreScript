@@ -8,7 +8,7 @@ Status: Done
 Category: Testbed
 Reviewed: No
 Created time: January 11, 2025 9:10 AM
-AI summary: Demonstrates various dialog windows in Alibre Script, including info, error, question, options, utility, open file, save file, and folder selection dialogs, with user interaction and callbacks.
+AI summary: Shows dialog windows in Alibre Script: info, error, question, options, utility, open file, save file, and folder selection, with user interaction and callbacks.
 
 ```python
 def windows_showcase():

@@ -8,7 +8,7 @@ Status: Done
 Category: Testbed
 Reviewed: No
 Created time: January 12, 2025 5:04 AM
-AI summary: Script generates thumbnails for assembly and part files, saves them as .jpg, and creates an Excel workbook embedding these images in 300×300 pixel cells. User inputs thumbnail size and output folder, and the script handles both parts and assemblies recursively.
+AI summary: Generates thumbnails for assembly and part files, saves them as .jpg, and creates an Excel workbook that embeds the images in 300×300 pixel cells. The user supplies the thumbnail size and output folder, and the script processes parts and assemblies recursively.
 
 ```python
 # https://www.alibre.com/forum/index.php?threads/add-icon-image-from-the-alibre-file-to-the-parts-list.25649/#post-176092 | @Cator from Alibre Forum

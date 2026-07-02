@@ -9,7 +9,7 @@ Status: Done
 Category: Testbed
 Reviewed: No
 Created time: February 23, 2025 8:06 PM
-AI summary: Showcase of parameter management in Alibre Script, including creation, listing, updating, and deletion of parameters like Width, Height, and EquationParam, with example code demonstrating each operation.
+AI summary: Alibre Script code that creates, lists, updates, and deletes part parameters such as Width, Height, and EquationParam.
 
 ```python
 import sys

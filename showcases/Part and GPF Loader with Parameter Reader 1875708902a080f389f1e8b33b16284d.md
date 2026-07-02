@@ -8,7 +8,7 @@ Status: Done
 Category: Testbed
 Reviewed: No
 Created time: January 26, 2025 1:21 PM
-AI summary: Python script for loading a part and associated global parameters, creating an output folder with a timestamp, and listing favorite parameters from the GPF, with error handling for missing parts or GPFs.
+AI summary: Python script that loads a part and its global parameters, creates a timestamped output folder, and lists favorite parameters from the GPF. Handles errors when the part or GPF is missing.
 
 ```python
 import math                             # For math operations

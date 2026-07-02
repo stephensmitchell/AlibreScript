@@ -9,7 +9,7 @@ Status: Done
 Category: Testbed
 Reviewed: No
 Created time: March 22, 2025 8:41 PM
-AI summary: A Cycloidal Disk Generator is implemented using Alibre Script and IronPython, featuring a class to calculate points for the cycloidal disk curve, with performance metrics for point calculation, polyline building, and adding to a sketch.
+AI summary: Generates a cycloidal disk in Alibre Script and IronPython using a class that calculates the points of the cycloidal disk curve. The script times point calculation, polyline building, and adding the result to a sketch.
 
 [CycloidalDiskPoints to import into Sketches](CycloidalDiskPoints%20to%20import%20into%20Sketches%201bf5708902a080d5ae50caaa7987465b.md)
 

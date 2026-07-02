@@ -8,7 +8,7 @@ Status: Done
 Category: Testbed
 Reviewed: No
 Created time: January 27, 2025 5:51 PM
-AI summary: Tool converts a selected closed sketch into a single B-spline, removing the original sketch and creating a new one with updated subdivision parameters. Users specify steps for lines, arcs, circles, and B-splines before conversion.
+AI summary: Converts a selected closed sketch into a single B-spline, deletes the original sketch, and creates a new one with updated subdivision parameters. The user sets the steps for lines, arcs, circles, and B-splines before conversion.
 
 - 1st release snapshot - not the latest version of the tool.
     

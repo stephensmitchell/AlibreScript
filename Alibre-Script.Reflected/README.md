@@ -1,7 +1,7 @@
-Alibre-Script.Reflected uses reflection of AlibreScriptAddOn.dll to generate the python source. Similar to the other stub files, it was made to help working with Alibre Script code outside of Alibre Design. This is another attempt at it.
-Parameter information is included in the python source:
+Alibre-Script.Reflected uses reflection of AlibreScriptAddOn.dll to generate the python source. Like the other stub files, I made it to help work with Alibre Script code outside Alibre Design. This is another attempt at it.
+The python source includes parameter information:
 ![Alt text](image.png)
-This can be useful as a reference when learning and programming Alibre Script, which is my primary use for it, along with the other stub files I've created.
+I use it, along with the other stub files I've created, as a reference when learning and programming Alibre Script.
 ```
 │   AlibreScript.Reflected.code-workspace
 │   generate.py

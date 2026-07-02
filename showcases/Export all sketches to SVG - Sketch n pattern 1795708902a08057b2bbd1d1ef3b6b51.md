@@ -8,7 +8,7 @@ Status: Done
 Category: Testbed
 Reviewed: No
 Created time: January 12, 2025 12:56 AM
-AI summary: The script exports all 2D sketches named 'Sketch<1>', 'Sketch<2>', etc., from the current part to SVG files, handling unsaved parts and errors if sketches are not found, with a limit of 50 sketches.
+AI summary: Exports all 2D sketches named 'Sketch<1>', 'Sketch<2>', etc., from the current part to SVG files, up to 50 sketches. Handles unsaved parts and errors when sketches are not found.
 
 ```python
 def export_all_sketches_guessing_names():

@@ -9,7 +9,7 @@ Status: Done
 Category: Testbed
 Reviewed: No
 Created time: February 7, 2025 11:02 PM
-AI summary: A Python script for a Simple Equation Editor allows users to set parameters for a part in inches, with a dialog for inputting size options and real-time updates to equations or numeric values, including error handling for invalid inputs.
+AI summary: A Python script for a Simple Equation Editor. Users set a part's parameters in inches by choosing from size options in a dialog. The script updates each parameter's equation or numeric value in real time and reports errors for invalid inputs.
 
 ```python
 def main():

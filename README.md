@@ -2,11 +2,12 @@
 
 Examples, demos, experiments, API references, and stub files for working with Alibre Script outside and inside Alibre Design.
 
-This project is focused on Alibre Script and IronPython 2.7.10 compatibility.
+This project targets Alibre Script and IronPython 2.7.10 compatibility.
 
 ## Table Of Contents
 
 - [What Is Here](#what-is-here)
+- [Official Alibre Resources](#official-alibre-resources)
 - [Quick Start](#quick-start)
 - [LLM And Agent Resources](#llm-and-agent-resources)
 - [Key Files](#key-files)
@@ -18,13 +19,17 @@ This project is focused on Alibre Script and IronPython 2.7.10 compatibility.
 
 ## What Is Here
 
-This repository collects:
+This repository contains:
 
 - Alibre Script examples and showcases.
 - Generated Python stubs for editor autocomplete and Pylance/Pyright checking.
 - API text and CSV exports.
 - A self-contained runtime verifier for the real Alibre Script environment.
 - VS Code settings for local script development.
+
+## Official Alibre Resources
+
+Alibre's official resources for API development and AI/LLM/agent workflows: <https://www.alibre.com/api/>
 
 ## Quick Start
 
@@ -81,13 +86,13 @@ Use these files when working with LLMs, coding agents, or prompt-driven Alibre S
 
 ## VS Code Type Checking
 
-The generated stub package is used for local editor support:
+The generated stub package provides local editor support:
 
 ```text
 Alibre-Script-Stub-Files/generated/package
 ```
 
-Important Alibre Script globals are supported by the stubs and verifier, including:
+The stubs and verifier support Alibre Script globals, including:
 
 ```python
 CurrentPart()
@@ -131,7 +136,7 @@ RESULT PASS
 
 - Alibre Script uses IronPython 2.7.10, so scripts should stay Python 2.7 compatible.
 - The local CPython fallback behavior in `alibre_script_all_types_main.py` is for syntax and editor checks only.
-- Real API behavior must be verified inside Alibre Script.
+- Verify real API behavior inside Alibre Script.
 
 ## License
 

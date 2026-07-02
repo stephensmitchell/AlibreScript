@@ -9,7 +9,7 @@ Status: Done
 Category: Testbed
 Reviewed: No
 Created time: February 23, 2025 7:30 PM
-AI summary: Showcases configuration management using IronPython 2.7, including creating, activating, and modifying configurations, along with locking properties and retrieving configuration information.
+AI summary: Manages configurations in IronPython 2.7 by creating, activating, and modifying them, locking properties, and retrieving configuration information.
 
 ```python
 # Configurations Showcase

@@ -9,7 +9,7 @@ Status: Done
 Category: Research
 Reviewed: No
 Created time: April 14, 2025 6:58 PM
-AI summary: Python script for processing 3D point data from a TXT file, creating multiple splines, and generating reference points and planes in Alibre using IronPython. Includes functions for reading input, defining point ranges, and adding sketches to the current part.
+AI summary: Python script that reads 3D point data from a TXT file, builds multiple splines, and adds reference points and planes in Alibre using IronPython. Has functions to read the input, define point ranges, and add sketches to the current part.
 
 ```python
 import fpformat

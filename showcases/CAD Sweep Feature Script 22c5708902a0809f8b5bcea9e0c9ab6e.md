@@ -9,7 +9,7 @@ Status: Done
 Category: Testbed
 Reviewed: No
 Created time: July 10, 2025 2:44 AM
-AI summary: The CAD Sweep Feature Script defines a class for creating sweep features in Alibre Script, including methods for creating planes, adding profile circles, and constructing 3D paths, with an example demonstrating a helical sweep.
+AI summary: A class in Alibre Script that builds sweep features. Its methods create planes, add profile circles, and build 3D paths. An example builds a helical sweep.
 
 ![image.png](image%2010.png)
 

@@ -8,7 +8,7 @@ Status: Done
 Category: Testbed
 Reviewed: No
 Created time: January 18, 2025 1:58 AM
-AI summary: Python script generates thumbnails and an Excel report for parts and assemblies, including utility functions for file naming, thumbnail saving, and Excel integration with images and quantities.
+AI summary: Python script generates thumbnails and an Excel report for parts and assemblies. It has utility functions for file naming and thumbnail saving, and writes images and quantities into Excel.
 
 ```python
 import clr

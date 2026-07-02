@@ -5,7 +5,7 @@ The generated package is for IDE authoring support outside Alibre Design.
 Generated package path:
 
 ```text
-D:\05-26-2026\AlibreScript\Alibre-Script-Stub-Files\generated\package
+path\to\AlibreScript\Alibre-Script-Stub-Files\generated\package
 ```
 
 Import name:
@@ -50,7 +50,7 @@ The generated package is only for:
 Add this folder to your IDE search path:
 
 ```text
-D:\05-26-2026\AlibreScript\Alibre-Script-Stub-Files\generated\package
+path\to\AlibreScript\Alibre-Script-Stub-Files\generated\package
 ```
 
 VS Code example:
@@ -58,7 +58,7 @@ VS Code example:
 ```json
 {
   "python.analysis.extraPaths": [
-    "D:/05-26-2026/AlibreScript/Alibre-Script-Stub-Files/generated/package"
+    "path/to/AlibreScript/Alibre-Script-Stub-Files/generated/package"
   ]
 }
 ```
@@ -68,7 +68,7 @@ VS Code example:
 Install into the Python environment used by your IDE:
 
 ```powershell
-cd D:\05-26-2026\AlibreScript\Alibre-Script-Stub-Files\generated\package
+cd path\to\AlibreScript\Alibre-Script-Stub-Files\generated\package
 pip install -e .
 ```
 
@@ -123,7 +123,7 @@ from the Alibre Script console.
 Recommended flow:
 
 ```powershell
-cd D:\05-26-2026\AlibreScript\Alibre-Script-Stub-Files\generated\package
+cd path\to\AlibreScript\Alibre-Script-Stub-Files\generated\package
 python setup.py sdist bdist_wheel
 twine check dist\*
 twine upload dist\*

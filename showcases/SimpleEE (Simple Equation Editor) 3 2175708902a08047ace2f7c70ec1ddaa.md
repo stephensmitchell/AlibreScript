@@ -9,7 +9,7 @@ Status: Done
 Category: Testbed
 Reviewed: No
 Created time: June 18, 2025 9:41 PM
-AI summary: Dynamic Equation Editor in Python for Alibre Script allows real-time updates of parameter equations and values, with error handling for invalid inputs and a user-friendly interface for input changes.
+AI summary: Dynamic Equation Editor in Python for Alibre Script. Updates parameter equations and values in real time, handles invalid inputs, and provides an interface for input changes.
 
 ```python
 #===========================================================

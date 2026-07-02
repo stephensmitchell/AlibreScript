@@ -8,7 +8,7 @@ Status: Done
 Category: Testbed
 Reviewed: No
 Created time: January 11, 2025 9:22 AM
-AI summary: A Python function demonstrates creating a 2D sketch with various shapes including lines, rectangles, circles, arcs, ellipses, polygons, polylines, and B-splines using Alibre Script and IronPython.
+AI summary: A Python function builds one 2D sketch containing lines, rectangles, circles, arcs, ellipses, polygons, polylines, and B-splines with Alibre Script and IronPython.
 
 ```python
 def sketch_2d_showcase():

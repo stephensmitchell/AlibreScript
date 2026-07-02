@@ -8,7 +8,7 @@ Status: Done
 Category: Testbed
 Reviewed: No
 Created time: January 9, 2025 7:56 PM
-AI summary: Python script to find and list 3D sketches in a part using a specified naming pattern, handling exceptions for non-existent sketches and printing details about found sketches and their figures.
+AI summary: Python script that finds and lists a part's 3D sketches matching a naming pattern, catches exceptions for sketches that don't exist, and prints details about the found sketches and their figures.
 
 ```python
 def find_3d_sketches(part, sketch_format="3DSketch<{}>", max_sketches=50):

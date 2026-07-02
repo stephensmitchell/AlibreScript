@@ -9,7 +9,7 @@ Status: Done
 Category: Testbed
 Reviewed: No
 Created time: April 30, 2025 11:10 PM
-AI summary: The script generates a configuration and parameter report, displaying local and global configurations and parameters, including their names, types, values, and statuses. It starts by retrieving configuration information and concludes with a report completion message.
+AI summary: The script prints a configuration and parameter report covering local and global configurations and parameters, with their names, types, values, and statuses. It first retrieves configuration information and ends with a report completion message.
 
 [001.AD_PKG](001.ad_pkg)
 

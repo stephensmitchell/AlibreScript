@@ -8,7 +8,7 @@ Status: Done
 Category: Testbed
 Reviewed: No
 Created time: January 11, 2025 8:49 AM
-AI summary: Creates a 50×50×10 block, adds a sketch with a point at (25, 25), converts it to 3D coordinates, and creates a reference plane at that location using a specified normal vector.
+AI summary: Creates a 50×50×10 block, adds a sketch with a point at (25, 25), converts it to 3D coordinates, and adds a reference plane at that location with a specified normal vector.
 
 ```python
 def create_plane_at_sketch_point():

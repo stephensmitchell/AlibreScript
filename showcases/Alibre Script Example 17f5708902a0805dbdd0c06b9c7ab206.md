@@ -8,7 +8,7 @@ Status: Done
 Category: Testbed
 Reviewed: No
 Created time: January 17, 2025 9:29 PM
-AI summary: Example Alibre Script demonstrates creating a part, adding sketches, and performing operations like extrusion and cutting using IronPython 2.7 syntax.
+AI summary: Alibre Script example that creates a part, adds sketches, then extrudes and cuts it, written in IronPython 2.7 syntax.
 
 ```python
 # =========================

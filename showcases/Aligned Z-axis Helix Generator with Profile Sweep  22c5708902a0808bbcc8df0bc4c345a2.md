@@ -9,7 +9,7 @@ Status: Done
 Category: Testbed
 Reviewed: No
 Created time: July 10, 2025 2:38 AM
-AI summary: Python script for generating an aligned Z-axis helix with a profile sweep, including parameters for radius, pitch, turns, and step, along with the creation of a helix path and profile plane in a 3D sketch.
+AI summary: Python script that generates an aligned Z-axis helix with a profile sweep. It takes radius, pitch, turns, and step parameters and builds a helix path and profile plane in a 3D sketch.
 
 > See page below for working inplementation
 > 

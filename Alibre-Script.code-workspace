@@ -4,5 +4,11 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"python.analysis.extraPaths": [
+			"c:\\Users\\ssm\\.vscode\\extensions\\stephensmitchell.alibrescript-0.0.3\\stubs",
+			"c:\\Users\\ssm\\.vscode\\extensions\\stephensmitchell.alibrescript-2.0.0\\stubs"
+		],
+		"python.analysis.typeCheckingMode": "basic"
+	}
 }

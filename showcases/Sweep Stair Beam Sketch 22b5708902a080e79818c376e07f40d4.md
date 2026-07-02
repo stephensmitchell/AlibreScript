@@ -9,7 +9,7 @@ Status: Done
 Category: Testbed
 Reviewed: No
 Created time: July 9, 2025 4:58 AM
-AI summary: Python code for creating a sweep stair beam with valid geometry using Alibre Script and IronPython, including path definition, unit direction vector computation, profile plane creation, and sweep feature addition.
+AI summary: Python script using Alibre Script and IronPython that builds a sweep stair beam with valid geometry: defines the path, computes the unit direction vector, creates the profile plane, and adds the sweep feature.
 
 ```python
 # Corrected Sweep Stair Beam with Valid Geometry

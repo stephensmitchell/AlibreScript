@@ -8,7 +8,7 @@ Status: Done
 Category: Testbed
 Reviewed: No
 Created time: January 11, 2025 9:40 AM
-AI summary: Demonstrates creating a 3D sketch using Alibre Script, including adding lines, an arc, a B-spline, a polyline, and individual points in a single sketch.
+AI summary: Builds a 3D sketch in Alibre Script and adds lines, an arc, a B-spline, a polyline, and individual points to a single sketch.
 
 ```python
 def sketch_3d_showcase():

@@ -9,7 +9,7 @@ Status: In progress
 Category: Testbed
 Reviewed: No
 Created time: May 3, 2025 4:03 AM
-AI summary: Utilities for importing and exporting parts in Alibre Design using Python, including functions for exporting to SAT and STEP formats, and importing from STEP, IGES, and SAT files, with error handling for initialization and file operations.
+AI summary: Utilities for importing and exporting parts in Alibre Design using Python. Exports parts to SAT and STEP formats, imports parts from STEP, IGES, and SAT files, and handles errors during initialization and file operations.
 
 ```python
 import clr

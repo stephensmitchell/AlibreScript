@@ -136,7 +136,7 @@ rg -n "WindowsInputTypes|OptionsDialog|UtilityDialog|Options.append" `
 For VS Code or another editor, use the stub files for completion while keeping
 the API CSV open for confirmation:
 
-1. Open the workspace root `D:\05-26-2026\AlibreScript`.
+1. Open the workspace root `path\to\AlibreScript`.
 2. Keep `alibre-script.api.text/llms.txt` and `AGENTS.md` in context.
 3. Add `Alibre-Script-Stub-Files/` and `Alibre-Script.Reflected/output/` to the
    editor search scope.
@@ -146,7 +146,7 @@ the API CSV open for confirmation:
 ## Prompt Pattern
 
 ```text
-Use the Alibre Script workspace at D:\05-26-2026\AlibreScript.
+Use the Alibre Script workspace at path\to\AlibreScript.
 Trust alibre-script.api.text/alibre.script.api3.csv first.
 Use Alibre-Script.Reflected/sources for class-specific parameter context.
 Use Alibre-Script-Stub-Files only for autocomplete/reference.

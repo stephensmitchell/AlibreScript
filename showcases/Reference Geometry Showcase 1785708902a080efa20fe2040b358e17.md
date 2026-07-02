@@ -8,7 +8,7 @@ Status: Done
 Category: Testbed
 Reviewed: No
 Created time: January 11, 2025 9:00 AM
-AI summary: Python code for creating a reference geometry showcase includes steps to create a block, add an angled plane, define a plane from three points, and establish an intersection axis, avoiding parallel-plane errors.
+AI summary: Python code that builds a reference geometry showcase. It creates a block, adds an angled plane, defines a plane from three points, and creates an intersection axis, avoiding parallel-plane errors.
 
 ```python
 def reference_geometry_showcase_fixed():

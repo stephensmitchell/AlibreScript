@@ -9,7 +9,7 @@ Status: Done
 Category: Testbed
 Reviewed: No
 Created time: February 7, 2025 11:01 PM
-AI summary: A dynamic equation editor for Alibre Script allows users to edit parameters in real-time within an active part window, handling equations and numeric values while regenerating the part upon changes.
+AI summary: An equation editor for Alibre Script that lets users edit a part's parameters in real time within an active part window, accepting equations or numeric values and regenerating the part after each change.
 
 ```python
 #===========================================================

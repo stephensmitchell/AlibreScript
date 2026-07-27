@@ -1,46 +1,44 @@
-# Generated Alibre Script Stubs
+# Alibre Script type stubs
 
-Generated from:
+Editor autocomplete and type hints for the Alibre Script API.
 
-- `../alibre-script.api.text/alibre.script.api2.csv`
-- `../Alibre-Script.Reflected/sources/`
+Generated from `AlibreScriptAddOn` 6.1.0.0 and the matching `AlibreScriptAPI.xml`, both read from an
+installed Alibre Design. Return types, property types and parameter names come
+from assembly reflection; summaries and parameter descriptions come from the
+XML documentation.
 
-Files:
+## Use
 
-- `AlibreScript.pyi`: editor/static-analysis stub with `@overload` signatures.
-- `AlibreScript.py`: IronPython 2.7.10-compatible runtime mock for imports
-  outside Alibre Design. It intentionally has no type annotations, no f-strings,
-  and no Python 3-only syntax.
-- `package/`: installable IDE package. It exposes the same mock as
-  `import AlibreScript`.
+Point the language server at the directory containing the package:
 
-These files are for authoring support only. Alibre Script still runs inside
-Alibre Design/IronPython 2.7.10, and CAD behavior must be verified there.
-
-The generated `AlibreScript` module includes common Alibre Script globals:
-`ScriptFileName`, `ScriptFolder`, `CurrentPart()`, `CurrentAssembly()`,
-`CurrentParts()`, and `CurrentAssemblies()`.
-
-Do not copy `.pyi` syntax into Alibre Script. The `.pyi` file is only for
-editors and language servers.
-
-Regenerate from `alibre-script.api.text`:
-
-```powershell
-python tools\generate_stubs.py
+```json
+{
+  "python.analysis.extraPaths": ["path/to/generated/package"]
+}
 ```
 
-Install locally for an IDE:
+Then, for editor support only:
 
-```powershell
-pip install -e package
+```python
+from AlibreScript import *
 ```
 
-Packaging and PyPI notes are documented in:
+## Authoring only
 
-```text
-..\..\alibre-script.api.text\docs\PACKAGE-USAGE.md
+Alibre Script runs on IronPython 2.7.10 inside Alibre Design, which supplies the
+real API as built-in globals. Never import this package inside a live Alibre
+script. The runtime `__init__.py` raises on every call by design; it exists so
+the import resolves outside Alibre, not so the API works there.
+
+## Regenerating
+
+Do not hand-edit. From `alibre-script.api.text`:
+
+```
+python tools/extract_api.py tools/api_model.json
+python tools/generate_stubs.py
 ```
 
-Do not install or import this package inside the Alibre Script add-on. Inside
-Alibre Design, use the real built-in Alibre Script API.
+The first step needs Alibre Design installed and pythonnet available. The second
+reads only the committed `api_model.json`, so routine regeneration works on any
+machine.

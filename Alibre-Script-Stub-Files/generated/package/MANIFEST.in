@@ -1,2 +1,3 @@
 include README.md
-recursive-include AlibreScript *.pyi py.typed
+include AlibreScript/py.typed
+include AlibreScript/__init__.pyi

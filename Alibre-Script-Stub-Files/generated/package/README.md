@@ -1,43 +1,44 @@
-# alibrescript-ide-stubs
+# Alibre Script type stubs
 
-Authoring-only stubs for Alibre Script.
+Editor autocomplete and type hints for the Alibre Script API.
 
-This package installs an `AlibreScript` module so external IDEs can resolve
-imports such as:
+Generated from `AlibreScriptAddOn` 6.1.0.0 and the matching `AlibreScriptAPI.xml`, both read from an
+installed Alibre Design. Return types, property types and parameter names come
+from assembly reflection; summaries and parameter descriptions come from the
+XML documentation.
+
+## Use
+
+Point the language server at the directory containing the package:
+
+```json
+{
+  "python.analysis.extraPaths": ["path/to/generated/package"]
+}
+```
+
+Then, for editor support only:
 
 ```python
 from AlibreScript import *
 ```
 
-The runtime `AlibreScript/__init__.py` is intentionally compatible with
-IronPython 2.7.10. The companion `AlibreScript/__init__.pyi` is for editors and
-language servers only.
+## Authoring only
 
-This package is not the real Alibre Script API and should not be imported inside
-Alibre Design. Alibre Design provides the real API at script runtime.
+Alibre Script runs on IronPython 2.7.10 inside Alibre Design, which supplies the
+real API as built-in globals. Never import this package inside a live Alibre
+script. The runtime `__init__.py` raises on every call by design; it exists so
+the import resolves outside Alibre, not so the API works there.
 
-Included Alibre Script globals: `ScriptFileName`, `ScriptFolder`,
-`CurrentPart()`, `CurrentAssembly()`, `CurrentParts()`, and
-`CurrentAssemblies()`.
+## Regenerating
 
-Local install:
+Do not hand-edit. From `alibre-script.api.text`:
 
-```powershell
-pip install -e .
+```
+python tools/extract_api.py tools/api_model.json
+python tools/generate_stubs.py
 ```
 
-GitHub install after the repository is pushed:
-
-```powershell
-pip install "git+https://github.com/stephensmitchell/AlibreScript.git#egg=alibrescript-ide-stubs&subdirectory=Alibre-Script-Stub-Files/generated/package"
-```
-
-This is a Git repository install, not a GitHub Packages registry publish.
-GitHub Packages does not currently provide a PyPI-compatible Python package
-registry. Use PyPI/TestPyPI for a real Python package registry.
-
-Full usage and publishing notes:
-
-```text
-..\..\..\alibre-script.api.text\docs\PACKAGE-USAGE.md
-```
+The first step needs Alibre Design installed and pythonnet available. The second
+reads only the committed `api_model.json`, so routine regeneration works on any
+machine.

@@ -46,7 +46,6 @@ PRIMITIVES = {
     'IronPython.Runtime.PythonTuple': 'Any',
 }
 
-
 def install_resolver(root):
     search = [os.path.join(root, 'Addons', 'AlibreScript'), root]
 
@@ -63,7 +62,6 @@ def install_resolver(root):
         return None
 
     AppDomain.CurrentDomain.AssemblyResolve += ResolveEventHandler(_resolve)
-
 
 def py_type(t):
     """.NET Type -> the annotation a stub should use."""
@@ -83,7 +81,6 @@ def py_type(t):
         return 'Any'
     return 'Any'
 
-
 def doc_id_type(t):
     """.NET Type -> the spelling used inside an XML documentation ID."""
     if t is None:
@@ -95,18 +92,15 @@ def doc_id_type(t):
     full = t.FullName or t.Name
     return full.split('[[')[0].replace('+', '.')
 
-
 def member_key(cls, name, params):
     if not params:
         return '%s%s.%s' % (API_NS, cls, name)
     return '%s%s.%s(%s)' % (API_NS, cls, name, ','.join(params))
 
-
 def clean(node):
     if node is None:
         return ''
     return re.sub(r'\s+', ' ', ''.join(node.itertext())).strip()
-
 
 def parse_xml(path):
     docs = {}
@@ -126,7 +120,6 @@ def parse_xml(path):
         }
     return docs
 
-
 def index_by_name(docs):
     """Group documented members by their un-parenthesised name.
 
@@ -138,7 +131,6 @@ def index_by_name(docs):
     for ident, d in docs.items():
         out.setdefault(ident.split('(')[0], []).append(d)
     return out
-
 
 def newest_alibre_root():
     override = os.environ.get('ALIBRE_PROGRAM_DIR')
@@ -153,7 +145,6 @@ def newest_alibre_root():
         if os.path.isfile(os.path.join(program, 'AlibreX.dll')):
             found.append(program)
     return sorted(found)[-1] if found else None
-
 
 def main():
     ap = argparse.ArgumentParser()
@@ -297,7 +288,6 @@ def main():
     print('no doc at all   :', unmatched)
     print('documented cls  :', sum(1 for c in classes.values() if c.get('documented')), 'of', len(classes))
     print('wrote           :', args.output)
-
 
 if __name__ == '__main__':
     main()

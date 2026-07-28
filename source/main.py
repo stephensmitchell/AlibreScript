@@ -7,7 +7,6 @@ import os
 import sys
 from math import cos, radians, sin
 
-
 StubPackage = os.path.join(
     os.path.dirname(__file__),
     'Alibre-Script-Stub-Files',
@@ -26,7 +25,6 @@ from AlibreScript import (
     ScriptFileName,
     ScriptFolder,
 )
-
 
 def create_two_angle_fixture_references():
     p = CurrentPart()
@@ -53,7 +51,6 @@ def create_two_angle_fixture_references():
     plane30 = p.AddPlane('30 degree', yz_plane, axis2, angle30)
 
     return p, plane16, axis2, plane30
-
 
 if __name__ == '__main__':
     part, plane16, axis2, plane30 = create_two_angle_fixture_references()

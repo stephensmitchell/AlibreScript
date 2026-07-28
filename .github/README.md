@@ -18,7 +18,6 @@
   - Where things live
     - `source/` holds the examples, stub files, API notes, and showcases.
     - `documentation/` holds reference notes.
-    - `reviews/` holds dated code reviews.
   - Good to know
     - Scripts run under IronPython 2.7, so keep them compatible with Python 2.7.
     - The examples keep their inline comments on purpose, because those comments are what makes them worth reading.

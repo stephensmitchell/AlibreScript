@@ -21,8 +21,6 @@ if not _RUNNING_IN_ALIBRE_SCRIPT:
         def __init__(self, *args, **kwargs):
             pass
 
-
-
     class Part(_StubBase):
         pass
         class DirectionType:
@@ -1857,26 +1855,21 @@ _RESULT_COUNTS = {
     'na': 0,
 }
 
-
 def _value_type_name(value):
     try:
         return type(value).__name__
     except Exception:
         return '<type unavailable>'
 
-
 def _error_text(error):
     return error.__class__.__name__ + ': ' + str(error)
-
 
 def _reset_result_counts():
     for key in _RESULT_COUNTS:
         _RESULT_COUNTS[key] = 0
 
-
 def _status_prefix(status):
     return (status + '       ')[:7]
-
 
 def _print_status(status, message):
     if status == 'ERROR':
@@ -1891,10 +1884,8 @@ def _print_status(status, message):
         _RESULT_COUNTS['na'] += 1
     print(_status_prefix(status) + message)
 
-
 def _global_value(name):
     return globals().get(name, _MISSING)
-
 
 def _resolve_path(path):
     parts = path.split('.')
@@ -1908,7 +1899,6 @@ def _resolve_path(path):
             return _MISSING
     return value
 
-
 def _call_global(name):
     fn = _global_value(name)
     if fn is _MISSING:
@@ -1917,7 +1907,6 @@ def _call_global(name):
         return True, 'OK', fn()
     except Exception as error:
         return False, _error_text(error), None
-
 
 def _call_method(obj, method_name, args):
     try:
@@ -1929,7 +1918,6 @@ def _call_method(obj, method_name, args):
     except Exception as error:
         return False, _error_text(error), None
 
-
 def _expected_workspace_mismatch(name, detail):
     lower = detail.lower()
     if name == 'CurrentAssembly' and 'not an assembly' in lower:
@@ -1938,18 +1926,15 @@ def _expected_workspace_mismatch(name, detail):
         return True
     return False
 
-
 def _print_section(title):
     print('')
     print('== ' + title + ' ==')
-
 
 def _print_result(label, ok, detail, value):
     if ok:
         _print_status('OK', '{0} -> {1}'.format(label, _value_type_name(value)))
     else:
         _print_status('ERROR', '{0}: {1}'.format(label, detail))
-
 
 def _report_paths(title, paths):
     found = 0
@@ -1964,7 +1949,6 @@ def _report_paths(title, paths):
             found += 1
             _print_status('OK', '{0} -> {1}'.format(path, _value_type_name(value)))
     print('Summary: {0} found, {1} missing'.format(found, missing))
-
 
 def _get_current_documents():
     documents = {}
@@ -1987,7 +1971,6 @@ def _get_current_documents():
         documents[name] = value
     return documents
 
-
 def _exercise_part_read_api(part):
     _print_section('CurrentPart Read API')
     calls = (
@@ -2008,7 +1991,6 @@ def _exercise_part_read_api(part):
         label = method_name + '(' + ', '.join([repr(arg) for arg in args]) + ')'
         ok, detail, value = _call_method(part, method_name, args)
         _print_result(label, ok, detail, value)
-
 
 def _exercise_new_part_3d_sketch_api():
     _print_section('New Part 3D Sketch API')
@@ -2065,7 +2047,6 @@ def _exercise_new_part_3d_sketch_api():
     else:
         _print_status('SKIP', 'Sketch3D.AddLine.six_scalars: disabled by RUN_3D_SKETCH_SIX_SCALAR_LINE_TEST')
 
-
 def _exercise_part_create_api(part):
     _print_section('CurrentPart Create API')
     ok, detail, xy_plane = _call_method(part, 'GetPlane', ('XY-Plane',))
@@ -2100,14 +2081,12 @@ def _exercise_part_create_api(part):
             ok, detail, value = _call_method(sketch, method_name, args)
             _print_result('Sketch.' + method_name, ok, detail, value)
 
-
 def _make_suffix():
     try:
         import time
         return str(int(time.time()))
     except Exception:
         return 'Manual'
-
 
 def _exercise_parameter_showcase():
     _print_section('Parameter Showcase Transaction API')
@@ -2159,7 +2138,6 @@ def _exercise_parameter_showcase():
     except Exception as error:
         _print_status('ERROR', 'Parameters count: ' + _error_text(error))
 
-
 def _exercise_assembly_read_api(assembly):
     _print_section('CurrentAssembly Read API')
     for method_name, args in (
@@ -2175,7 +2153,6 @@ def _exercise_assembly_read_api(assembly):
         ok, detail, value = _call_method(assembly, method_name, args)
         _print_result(label, ok, detail, value)
 
-
 def _print_verification_summary():
     _print_section('Verification Summary')
     print('Errors: ' + str(_RESULT_COUNTS['error']))
@@ -2187,7 +2164,6 @@ def _print_verification_summary():
         print('RESULT PASS')
     else:
         print('RESULT FAIL')
-
 
 def main():
     _reset_result_counts()
@@ -2228,7 +2204,6 @@ def main():
 
     print('')
     print('main() complete')
-
 
 if RUN_ON_LOAD:
     main()

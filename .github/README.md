@@ -1,0 +1,24 @@
+# Alibre Script Examples and Experiments
+
+- This repository collects examples, demos, API references, and editor stub files for writing Alibre Script, so you have somewhere to look when you are learning the API.
+  - What is here
+    - Worked example scripts covering sketches, parts, assemblies, and reference geometry.
+    - A library of longer examples grouped by subject, such as mechanical, mathematical, and woodworking.
+    - Stub files that give your editor autocomplete and type checking for the Alibre Script API.
+    - A written record of the API surface, for checking what a call expects.
+    - Showcase scripts that demonstrate what is achievable.
+  - What you need
+    - Alibre Design with the AlibreScript add-on installed, to run the scripts.
+    - Visual Studio Code if you want the stub files to power autocomplete.
+  - Getting started
+    - Browse `source/alibre-script-examples/` for short, single-topic scripts.
+    - Move on to `source/alibre-script-library-examples/` for longer worked examples.
+    - Open `source/Alibre-Script.code-workspace` in VS Code to pick up the type checking setup.
+    - Paste a script into the Alibre Script window and run it.
+  - Where things live
+    - `source/` holds the examples, stub files, API notes, and showcases.
+    - `documentation/` holds reference notes.
+  - Good to know
+    - Scripts run under IronPython 2.7, so keep them compatible with Python 2.7.
+    - The examples keep their inline comments on purpose, because those comments are what makes them worth reading.
+  - Use it under the MIT License.

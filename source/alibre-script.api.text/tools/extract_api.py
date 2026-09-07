@@ -11,7 +11,10 @@ Joins two sources on the .NET XML documentation ID:
 Emits one JSON file that a stub generator can consume without Alibre installed.
 
 Usage:
-    python extract_api.py <output.json> [--alibre-root "C:\\Program Files\\Alibre Design 29.0.1.29069\\Program"]
+    python extract_api.py <output.json> [--alibre-root "<Alibre install>\\Program"]
+
+Without --alibre-root the newest installed Alibre Design is used, and the
+ALIBRE_PROGRAM_DIR environment variable overrides the search.
 """
 import argparse
 import json
@@ -43,7 +46,6 @@ PRIMITIVES = {
     'IronPython.Runtime.PythonTuple': 'Any',
 }
 
-
 def install_resolver(root):
     search = [os.path.join(root, 'Addons', 'AlibreScript'), root]
 
@@ -60,7 +62,6 @@ def install_resolver(root):
         return None
 
     AppDomain.CurrentDomain.AssemblyResolve += ResolveEventHandler(_resolve)
-
 
 def py_type(t):
     """.NET Type -> the annotation a stub should use."""
@@ -80,7 +81,6 @@ def py_type(t):
         return 'Any'
     return 'Any'
 
-
 def doc_id_type(t):
     """.NET Type -> the spelling used inside an XML documentation ID."""
     if t is None:
@@ -92,18 +92,15 @@ def doc_id_type(t):
     full = t.FullName or t.Name
     return full.split('[[')[0].replace('+', '.')
 
-
 def member_key(cls, name, params):
     if not params:
         return '%s%s.%s' % (API_NS, cls, name)
     return '%s%s.%s(%s)' % (API_NS, cls, name, ','.join(params))
 
-
 def clean(node):
     if node is None:
         return ''
     return re.sub(r'\s+', ' ', ''.join(node.itertext())).strip()
-
 
 def parse_xml(path):
     docs = {}
@@ -123,7 +120,6 @@ def parse_xml(path):
         }
     return docs
 
-
 def index_by_name(docs):
     """Group documented members by their un-parenthesised name.
 
@@ -136,14 +132,29 @@ def index_by_name(docs):
         out.setdefault(ident.split('(')[0], []).append(d)
     return out
 
+def newest_alibre_root():
+    override = os.environ.get('ALIBRE_PROGRAM_DIR')
+    if override and os.path.isdir(override):
+        return override
+    base = os.environ.get('ProgramFiles', r'C:\Program Files')
+    found = []
+    for name in os.listdir(base):
+        if not name.upper().startswith('ALIBRE DESIGN') or 'BETA' in name.upper():
+            continue
+        program = os.path.join(base, name, 'Program')
+        if os.path.isfile(os.path.join(program, 'AlibreX.dll')):
+            found.append(program)
+    return sorted(found)[-1] if found else None
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('output')
-    ap.add_argument('--alibre-root', default=r'C:\Program Files\Alibre Design 29.0.1.29069\Program')
+    ap.add_argument('--alibre-root', default=None)
     args = ap.parse_args()
 
-    root = args.alibre_root
+    root = args.alibre_root or newest_alibre_root()
+    if not root:
+        raise SystemExit('No Alibre Design installation found. Pass --alibre-root.')
     dll = os.path.join(root, 'Addons', 'AlibreScript', 'AlibreScriptAddOn.dll')
     xml = os.path.join(root, 'Addons', 'AlibreScript', 'AlibreScriptAPI.xml')
     if not os.path.isfile(dll):
@@ -277,7 +288,6 @@ def main():
     print('no doc at all   :', unmatched)
     print('documented cls  :', sum(1 for c in classes.values() if c.get('documented')), 'of', len(classes))
     print('wrote           :', args.output)
-
 
 if __name__ == '__main__':
     main()
